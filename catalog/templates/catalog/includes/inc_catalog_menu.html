@@ -1,11 +1,12 @@
 <div class="cover-container d-flex w-100 h-100 p-5 mx-auto flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
-            <br>
+            <h2 class="cover-heading">Интернет магазин</h2>
             <col class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="{% url 'index' %}">Домой</a>
-            <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+            <a class="nav-link active" href="{% url 'catalog:index' %}">Домой</a>
+            <a class="nav-link" href="{% url 'catalog:contacts' %}">Контакты</a>
+            <br>
+            <br>
         </div>
     </header>
 </div>
-
