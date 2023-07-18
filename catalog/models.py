@@ -1,5 +1,7 @@
 from django.db import models
 
+NULLABLE = {'null': True, 'blank': True}
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length=50, verbose_name='Категория')
@@ -16,7 +18,7 @@ class Category(models.Model):
 class Product(models.Model):
     product_name = models.CharField(max_length=50, verbose_name='Наименование')
     product_description = models.TextField(verbose_name='Описание')
-    image = models.ImageField(verbose_name='Изображение (превью)', blank=True)
+    image = models.ImageField(verbose_name='Изображение (превью)',**NULLABLE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     price = models.IntegerField(verbose_name='Цена за покупку')
     date_of_creation = models.DateField(verbose_name='Дата создания')
