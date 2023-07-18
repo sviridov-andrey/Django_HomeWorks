@@ -42,6 +42,7 @@
         }
       }
 
+
     </style>
 
     <!-- Custom styles for this template -->
@@ -51,7 +52,11 @@
 <body class="text-center">
 {% include 'catalog/includes/inc_catalog_menu.html' %}
 
-{% block content %}{% endblock %}
+{% block content %}
+
+{% block goods_content %}{% endblock %}
+
+{% endblock %}
 </body>
 
 </html>
