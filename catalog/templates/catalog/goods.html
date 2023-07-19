@@ -1,20 +1,21 @@
-<body>
-<div class="row" style="width: 18rem;">
-    <div class="col">
-        {% for object in objects_list %}
-        <img src="..." class="card-img-top" alt="...">
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<div class="col">
+        <img src="/media/{{object.image}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h3 class="card-title">{{ object.product_name }}</h3>
             <p class="card-text">{{ object.product_description|truncatechars:100 }}</p>
         </div>
         <ul class="list-group list-group-flush">
+            <li class="list-group-item">Категория: {{ object.category }} </li>
             <li class="list-group-item">Цена: {{ object.price }} рублей</li>
             <li class="list-group-item">Дата создания: {{ object.date_of_creation }}</li>
             <li class="list-group-item">Дата изменения: {{ object.last_modified_date }}</li>
         </ul>
-        {% endfor%}
     </div>
 </div>
-</body>
+
+{% endblock %}
 
 
