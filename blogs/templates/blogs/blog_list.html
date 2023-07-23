@@ -1,0 +1,32 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+Блоги
+{% endblock %}
+
+{% block content %}
+<br>
+<form>
+    <a type="submit"  href="{% url 'blogs:create' %}">Создать новый блог</a>
+</form>
+<br>
+{% for object in objects_list %}
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="cart-body">
+                <div class="card-body">
+                    <h3 class="card-title">{{ object.title }}</h3>
+                    <p class="card-text">{{ object.body|truncatechars:100 }}</p>
+                    <button><a href="{% url 'blogs:view' object.pk %}">Читать</a></button>
+                    <button><a href="{% url 'blogs:edit' object.pk %}">Редактировать</a></button>
+                    <button><a href="#">Удалить</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endfor%}
+
+{% endblock %}

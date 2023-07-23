@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="cart-body">
+                <div class="card-body">
+                    <h3 class="card-title">{{ object.title }}</h3>
+                    <p class="card-text">{{ object.body }}</p>
+                </div>
+                <div class="card-footer">
+                    Просмотры: {{ object.views_count }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
