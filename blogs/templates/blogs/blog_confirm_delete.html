@@ -11,11 +11,14 @@
         <div class="card">
             <div class="cart-body">
                 <div class="card-body">
-                    <h3 class="card-title">{{ object.title }} ({{ object.slug }})</h3>
+                    <h3 class="card-title">Вы хотите удалить блог {{ object.title }} ({{ object.slug }})?</h3>
                     <p class="card-text">{{ object.body }}</p>
+                    <button><a type="submit" class="btn btn-danger">Удалить</a></button>
+                    <button><a href="{% url 'blogs:list' %}" class="btn btn-warning">Отмена</a></button>
                 </div>
                 <div class="card-footer">
                     Просмотры: {{ object.views_count }}
+
                 </div>
             </div>
         </div>
