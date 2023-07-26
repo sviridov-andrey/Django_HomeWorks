@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from django.utils.text import slugify
 from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
@@ -18,7 +17,7 @@ class BlogCreateView(CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('blogs:view', kwargs={'pk': self.object.pk})
+        return reverse('blogs:view', kwargs={'slug': self.object.slug})
 
 
 class BlogListView(ListView):
@@ -54,7 +53,7 @@ class BlogUpdateView(UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('blogs:view', kwargs={'pk': self.object.pk})
+        return reverse('blogs:view', kwargs={'slug': self.object.slug})
 
 
 class BlogDeleteView(DeleteView):

@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Product
 
@@ -9,8 +8,9 @@ class ProdictListView(ListView):
     context_object_name = 'objects_list'
 
 
-def contacts(request):
-    return render(request, 'catalog/contacts.html')
+class ProductContactListView(ListView):
+    model = Product
+    template_name = 'catalog/contacts.html'
 
 
 class ProductDetailView(DetailView):
