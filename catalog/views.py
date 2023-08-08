@@ -20,9 +20,20 @@ class ProductUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
         VersionFormset = inlineformset_factory(Product, Version, VersionForm, extra=1)
-        context_data['formset'] = VersionFormset()
-        print(context_data['formset'])
+        if self.request.method == 'POST':
+            context_data['formset'] = VersionFormset(self.request.POST, instance=self.object)
+        else:
+            context_data['formset'] = VersionFormset(instance=self.object)
         return context_data
+
+    def form_valid(self, form):
+        formset = self.get_context_data()['formset']
+        self.object = form.save()
+        if formset.is_valid():
+            formset.instance = self.object
+            formset.save()
+
+        return super().form_valid(form)
 
 
 class ProdictListView(ListView):
@@ -57,5 +68,3 @@ class VersionCreateView(CreateView):
     model = Version
     form_class = VersionForm
     success_url = reverse_lazy('catalog:index')
-
-
