@@ -1,6 +1,6 @@
 from django.forms import inlineformset_factory
 from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from .forms import ProductForm, VersionForm
 from .models import Product, Version
@@ -17,6 +17,13 @@ class ProductUpdateView(UpdateView):
     form_class = ProductForm
     success_url = reverse_lazy('catalog:index')
 
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        VersionFormset = inlineformset_factory(Product, Version, VersionForm, extra=1)
+        context_data['formset'] = VersionFormset()
+        print(context_data['formset'])
+        return context_data
+
 
 class ProdictListView(ListView):
     model = Product
@@ -29,12 +36,6 @@ class ProdictListView(ListView):
         context_data['formset'] = version_list
         return context_data
 
-    # def get_context_data(self, **kwargs):
-    #     context_data = super().get_context_data(**kwargs)
-    #     VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=0)
-    #     context_data['formset'] = VersionFormset()
-    #     return context_data
-
 
 class ProductContactListView(ListView):
     model = Product
@@ -44,6 +45,12 @@ class ProductContactListView(ListView):
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'catalog/goods.html'
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    template_name = 'catalog/catalog_confirm_delete.html'
+    success_url = reverse_lazy('catalog:index')
 
 
 class VersionCreateView(CreateView):
