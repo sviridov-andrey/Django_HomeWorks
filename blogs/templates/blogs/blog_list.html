@@ -7,21 +7,23 @@
 {% block content %}
 <br>
 <form>
-    <a type="submit"  href="{% url 'blogs:create' %}">Создать новый блог</a>
+    <a class="btn btn-outline-primary"  href="{% url 'blogs:create' %}">Создать новый блог</a>
 </form>
 <br>
 {% for object in objects_list %}
 <div class="row">
-    <div class="col-6">
+    <div class="col-4">
         <div class="card">
-            <div class="cart-body">
-                <div class="card-body">
-                    <h3 class="card-title">{{ object.title }}</h3>
-                    <p class="card-text">{{ object.body|truncatechars:100 }}</p>
-                    <button><a href="{% url 'blogs:view' object.slug %}">Читать</a></button>
-                    <button><a href="{% url 'blogs:edit' object.slug %}">Редактировать</a></button>
-                    <button><a href="{% url 'blogs:delete' object.slug %}">Удалить</a></button>
-                </div>
+            <div class="card-header">
+                <h3 class="card-title">{{ object.title }}</h3>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ object.body|truncatechars:100 }}</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-outline-primary" href="{% url 'blogs:view' object.slug %}">Читать</a>
+                <a class="btn btn-outline-primary" href="{% url 'blogs:edit' object.slug %}">Редактировать</a>
+                <a class="btn btn-outline-primary" href="{% url 'blogs:delete' object.slug %}">Удалить</a>
             </div>
         </div>
     </div>
