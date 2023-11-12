@@ -1,18 +1,17 @@
 {% extends 'catalog/base.html' %}
 
-{% block title %}
-Блоги
-{% endblock %}
-
 {% block content %}
+
+<title>Блоги</title>
+<h2>Блоги</h2>
 <br>
 <form>
-    <a class="btn btn-outline-primary"  href="{% url 'blogs:create' %}">Создать новый блог</a>
+    <a class="btn btn-outline-primary" href="{% url 'blogs:create' %}">Создать новый блог</a>
 </form>
 <br>
-{% for object in objects_list %}
 <div class="row">
-    <div class="col-4">
+    {% for object in objects_list %}
+    <div class="col-5">
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">{{ object.title }}</h3>
@@ -27,8 +26,8 @@
             </div>
         </div>
     </div>
+    <br>
+    {% endfor%}
 </div>
-<br>
-{% endfor%}
 
 {% endblock %}
