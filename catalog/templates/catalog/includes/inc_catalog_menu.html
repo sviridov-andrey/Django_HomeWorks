@@ -14,6 +14,12 @@
                 <li><a href="{% url 'catalog:index' %}" class="nav-link px-2 link-secondary">Главная</a></li>
                 <li><a href="{% url 'blogs:list' %}" class="nav-link px-2">Блоги</a></li>
                 <li><a href="{% url 'catalog:contacts' %}" class="nav-link px-2">Контакты</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'users:logout' %}" class="nav-link px-2">Выйти</a></li>
+                {% else %}
+                <li><a href="{% url 'users:login' %}" class="nav-link px-2">Войти</a></li>
+                <li><a href="{% url 'users:register' %}" class="nav-link px-2">Регистрация</a></li>
+                {% endif %}
             </ul>
         </header>
     </div>

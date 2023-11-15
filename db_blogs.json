@@ -1,0 +1,93 @@
+[
+{
+  "model": "blogs.blog",
+  "pk": 19,
+  "fields": {
+    "title": "1",
+    "slug": "1",
+    "body": "hvytmyum5ymtymtym",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 1
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 20,
+  "fields": {
+    "title": "12",
+    "slug": "12",
+    "body": "hvytmyum5ymtymtym",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 1
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 21,
+  "fields": {
+    "title": "333",
+    "slug": "333",
+    "body": "hvytmyum5ymtymtym",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 2
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 22,
+  "fields": {
+    "title": "6",
+    "slug": "6",
+    "body": "rf4j6j6jetfherh",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 3
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 25,
+  "fields": {
+    "title": "mrbtbty",
+    "slug": "mrbtbty",
+    "body": "ytttttttttttttttttttttttttttваияваиваияваи\r\n11111111112222222222222333333",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 4
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 28,
+  "fields": {
+    "title": "mmmmmmmmmmm",
+    "slug": "mmmmmmmmmmm",
+    "body": "mioooooooooo moghdfbadfb\r\nasdafbafbsfbafb",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 1
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 30,
+  "fields": {
+    "title": "kkkkkkkkkkkkkk",
+    "slug": "kkkkkkkkkkkkkk",
+    "body": "ccccccccccccccccccccccccccc",
+    "image": "",
+    "date_of_creation": "2023-07-24",
+    "is_published": true,
+    "views_count": 2
+  }
+}
+]

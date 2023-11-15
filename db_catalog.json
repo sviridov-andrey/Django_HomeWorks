@@ -1,0 +1,196 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 16,
+  "fields": {
+    "category_name": "Инструмент",
+    "category_description": "Ручной, электро и бензоинструмент"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 17,
+  "fields": {
+    "category_name": "Электрика и свет",
+    "category_description": "Товары для электрики"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 18,
+  "fields": {
+    "category_name": "Сантехника",
+    "category_description": "Всё для санузла"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 19,
+  "fields": {
+    "category_name": "Сад",
+    "category_description": "Всё для работы и отдыха в саду"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 20,
+  "fields": {
+    "category_name": "Спецодежда",
+    "category_description": "Рабочая одежда и средства защиты"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "product_name": "Отвертка",
+    "product_description": "Крутит",
+    "image": "showimg_tmp_Kc3fN6m.jpg",
+    "category": 16,
+    "price": 50,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "product_name": "Перфоратор",
+    "product_description": "Мешает жить",
+    "image": "",
+    "category": 16,
+    "price": 1000,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "product_name": "Газонокосилка",
+    "product_description": "Косит",
+    "image": "",
+    "category": 16,
+    "price": 1499,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "product_name": "Лампочка",
+    "product_description": "Светит",
+    "image": "",
+    "category": 17,
+    "price": 70,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "product_name": "Унитаз",
+    "product_description": "Белый брат",
+    "image": "",
+    "category": 18,
+    "price": 2000,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "product_name": "Грабли",
+    "product_description": "Грабят",
+    "image": "",
+    "category": 19,
+    "price": 300,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "product_name": "Краги",
+    "product_description": "Защищают руки",
+    "image": "",
+    "category": 20,
+    "price": 500,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "product_name": "111",
+    "product_description": "111",
+    "image": "",
+    "category": 19,
+    "price": 1,
+    "date_of_creation": "2023-07-17",
+    "last_modified_date": "2023-07-17"
+  }
+},
+{
+  "model": "catalog.version",
+  "pk": 1,
+  "fields": {
+    "product": 2,
+    "version_number": "001",
+    "version_name": "Версия 001",
+    "version_is_active": true
+  }
+},
+{
+  "model": "catalog.version",
+  "pk": 3,
+  "fields": {
+    "product": 3,
+    "version_number": "002",
+    "version_name": "Версия 002",
+    "version_is_active": true
+  }
+},
+{
+  "model": "catalog.version",
+  "pk": 6,
+  "fields": {
+    "product": 15,
+    "version_number": "001",
+    "version_name": "001",
+    "version_is_active": true
+  }
+},
+{
+  "model": "catalog.version",
+  "pk": 7,
+  "fields": {
+    "product": 4,
+    "version_number": "001",
+    "version_name": "001",
+    "version_is_active": true
+  }
+},
+{
+  "model": "catalog.version",
+  "pk": 8,
+  "fields": {
+    "product": 6,
+    "version_number": "001",
+    "version_name": "001",
+    "version_is_active": true
+  }
+}
+]
