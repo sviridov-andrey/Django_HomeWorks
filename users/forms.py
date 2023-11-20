@@ -1,6 +1,5 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-
 from users.models import User
 
 
@@ -15,9 +14,10 @@ class UserProfileForm(UserChangeForm):
 
     class Meta:
         model = User
-        fields = ('email', 'first_name', 'last_name', 'phone', 'avatar')
+        fields = ('email',  'avatar', 'phone', 'country',)
 
     def __init__(self, *args, **kwargs):
-        super().__init__(self, *args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         self.fields['password'].widget = forms.HiddenInput()
+        self.fields['email'].disabled = True
