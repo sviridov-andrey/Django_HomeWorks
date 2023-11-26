@@ -8,6 +8,7 @@
             <p class="card-text">{{ object.product_description|truncatechars:100 }}</p>
         </div>
         <ul class="list-group list-group-flush">
+            <li class="list-group-item">Автор: {{ object.user }} </li>
             <li class="list-group-item">Категория: {{ object.category }} </li>
             <li class="list-group-item">Цена: {{ object.price }} рублей</li>
             <li class="list-group-item">Дата создания: {{ object.date_of_creation }}</li>

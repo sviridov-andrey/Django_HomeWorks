@@ -16,7 +16,32 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        exclude = ('is_published',)
+
+    def clean_product_name(self):
+        cleaned_data = self.cleaned_data['product_name']
+
+        if set(self.forbidden_words) & set(cleaned_data.lower().split()):
+            raise forms.ValidationError('Присутствует запрещенное слово в названии')
+
+        return cleaned_data
+
+    def clean_product_description(self):
+        cleaned_data = self.cleaned_data['product_description']
+
+        if set(self.forbidden_words) & set(cleaned_data.lower().split()):
+            raise forms.ValidationError('Присутствует запрещенное слово в описании')
+
+        return cleaned_data
+
+
+class ProductFormModerator(StyleFormMixin, forms.ModelForm):
+    forbidden_words = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево',
+                       'бесплатно', 'обман', 'полиция', 'радар']
+
+    class Meta:
+        model = Product
+        fields = ('product_description', 'category', 'is_published',)
 
     def clean_product_name(self):
         cleaned_data = self.cleaned_data['product_name']

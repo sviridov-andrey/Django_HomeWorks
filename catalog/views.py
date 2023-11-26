@@ -1,21 +1,27 @@
+from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.forms import inlineformset_factory
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import ProductForm, VersionForm
+from .forms import ProductForm, VersionForm, ProductFormModerator
 from .models import Product, Version
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(PermissionRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:index')
+    permission_required = 'catalog.add_product'
+
+    def get_initial(self):
+        return {'user': self.request.user}
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(PermissionRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:index')
+    permission_required = 'catalog.change_product'
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
@@ -34,6 +40,12 @@ class ProductUpdateView(UpdateView):
             formset.save()
 
         return super().form_valid(form)
+
+    def get_form_class(self):
+        if self.request.user.groups.filter(name='moderator').exists():
+            return ProductFormModerator
+        else:
+            return ProductForm
 
 
 class ProdictListView(ListView):
@@ -58,13 +70,15 @@ class ProductDetailView(DetailView):
     template_name = 'catalog/goods.html'
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(PermissionRequiredMixin, DeleteView):
     model = Product
     template_name = 'catalog/catalog_confirm_delete.html'
     success_url = reverse_lazy('catalog:index')
+    permission_required = 'catalog.delete_product'
 
 
-class VersionCreateView(CreateView):
+class VersionCreateView(PermissionRequiredMixin, CreateView):
     model = Version
     form_class = VersionForm
     success_url = reverse_lazy('catalog:index')
+    permission_required = 'catalog.add_version'
