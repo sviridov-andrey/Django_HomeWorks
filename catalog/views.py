@@ -1,10 +1,12 @@
 from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.core.cache import cache
 from django.forms import inlineformset_factory
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from .forms import ProductForm, VersionForm, ProductFormModerator
 from .models import Product, Version
+from .servises import get_cached_categories
 
 
 class ProductCreateView(PermissionRequiredMixin, CreateView):
@@ -15,6 +17,11 @@ class ProductCreateView(PermissionRequiredMixin, CreateView):
 
     def get_initial(self):
         return {'user': self.request.user}
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['category_list'] = get_cached_categories()
+        return context_data
 
 
 class ProductUpdateView(PermissionRequiredMixin, UpdateView):
