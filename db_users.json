@@ -1,0 +1,98 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$tEBrmbrPcyz7TmUKzeRzVB$pISSiX9waPHYP9YNy5vJdoF9nolwBH5+um+ahLvCX9E=",
+    "last_login": "2023-11-26T18:50:54.969Z",
+    "is_superuser": true,
+    "first_name": "admin",
+    "last_name": "admin",
+    "is_staff": true,
+    "date_joined": "2023-11-26T09:37:46.434Z",
+    "email": "sicklynumb@yandex.ru",
+    "avatar": "",
+    "phone": null,
+    "country": null,
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "954788505804",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$p1FLyOOlcY5x9a67BD9Uj9$pnVp4Gej7NfbNl5mR3PnevL2SLe4erEF4lqxHDsIIhw=",
+    "last_login": "2023-11-26T20:26:27.561Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-11-26T10:31:44.651Z",
+    "email": "user1@mail.ru",
+    "avatar": "",
+    "phone": null,
+    "country": null,
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "129038109829",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$XMgvjmfzSKQNu086f1zSFH$hLHKVrLhCMh0fgPGocS3lUoas7mY7GR7UpaQchWVT2k=",
+    "last_login": "2023-11-26T18:50:04.612Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-11-26T10:36:52.086Z",
+    "email": "user2@mail.ru",
+    "avatar": "",
+    "phone": null,
+    "country": null,
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "706026153108",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$e2tPQhKU4HOKbyArL6L2kU$MVP/xK2/NhA6U3GTnG0ItGk1DgvHDakfYevbdLOYAvY=",
+    "last_login": "2023-11-26T20:44:46.009Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-11-26T10:44:22Z",
+    "email": "moder1@mail.ru",
+    "avatar": "",
+    "phone": null,
+    "country": null,
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "952521124236",
+    "groups": [
+      1
+    ],
+    "user_permissions": [
+      4
+    ]
+  }
+}
+]

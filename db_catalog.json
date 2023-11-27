@@ -3,131 +3,145 @@
   "model": "catalog.category",
   "pk": 16,
   "fields": {
-    "category_name": "РРЅСЃС‚СЂСѓРјРµРЅС‚",
-    "category_description": "Р СѓС‡РЅРѕР№, СЌР»РµРєС‚СЂРѕ Рё Р±РµРЅР·РѕРёРЅСЃС‚СЂСѓРјРµРЅС‚"
+    "category_name": "Инструмент",
+    "category_description": "Ручной, электро и бензоинструмент"
   }
 },
 {
   "model": "catalog.category",
   "pk": 17,
   "fields": {
-    "category_name": "Р­Р»РµРєС‚СЂРёРєР° Рё СЃРІРµС‚",
-    "category_description": "РўРѕРІР°СЂС‹ РґР»СЏ СЌР»РµРєС‚СЂРёРєРё"
+    "category_name": "Электрика и свет",
+    "category_description": "Товары для электрики"
   }
 },
 {
   "model": "catalog.category",
   "pk": 18,
   "fields": {
-    "category_name": "РЎР°РЅС‚РµС…РЅРёРєР°",
-    "category_description": "Р’СЃС‘ РґР»СЏ СЃР°РЅСѓР·Р»Р°"
+    "category_name": "Сантехника",
+    "category_description": "Всё для санузла"
   }
 },
 {
   "model": "catalog.category",
   "pk": 19,
   "fields": {
-    "category_name": "РЎР°Рґ",
-    "category_description": "Р’СЃС‘ РґР»СЏ СЂР°Р±РѕС‚С‹ Рё РѕС‚РґС‹С…Р° РІ СЃР°РґСѓ"
+    "category_name": "Сад",
+    "category_description": "Всё для работы и отдыха в саду"
   }
 },
 {
   "model": "catalog.category",
   "pk": 20,
   "fields": {
-    "category_name": "РЎРїРµС†РѕРґРµР¶РґР°",
-    "category_description": "Р Р°Р±РѕС‡Р°СЏ РѕРґРµР¶РґР° Рё СЃСЂРµРґСЃС‚РІР° Р·Р°С‰РёС‚С‹"
+    "category_name": "Спецодежда",
+    "category_description": "Рабочая одежда и средства защиты"
   }
 },
 {
   "model": "catalog.product",
   "pk": 1,
   "fields": {
-    "product_name": "РћС‚РІРµСЂС‚РєР°",
-    "product_description": "РљСЂСѓС‚РёС‚",
+    "product_name": "Отвертка",
+    "product_description": "Крутит",
     "image": "showimg_tmp_Kc3fN6m.jpg",
     "category": 16,
     "price": 50,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 2,
+    "is_published": false
   }
 },
 {
   "model": "catalog.product",
   "pk": 2,
   "fields": {
-    "product_name": "РџРµСЂС„РѕСЂР°С‚РѕСЂ",
-    "product_description": "РњРµС€Р°РµС‚ Р¶РёС‚СЊ",
+    "product_name": "Перфоратор",
+    "product_description": "Мешает жить",
     "image": "",
     "category": 16,
     "price": 1000,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 5,
+    "is_published": true
   }
 },
 {
   "model": "catalog.product",
   "pk": 3,
   "fields": {
-    "product_name": "Р“Р°Р·РѕРЅРѕРєРѕСЃРёР»РєР°",
-    "product_description": "РљРѕСЃРёС‚",
+    "product_name": "Газонокосилка",
+    "product_description": "Косит",
     "image": "",
     "category": 16,
     "price": 1499,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 2,
+    "is_published": false
   }
 },
 {
   "model": "catalog.product",
   "pk": 4,
   "fields": {
-    "product_name": "Р›Р°РјРїРѕС‡РєР°",
-    "product_description": "РЎРІРµС‚РёС‚",
+    "product_name": "Лампочка",
+    "product_description": "Светит",
     "image": "",
     "category": 17,
     "price": 70,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 5,
+    "is_published": true
   }
 },
 {
   "model": "catalog.product",
   "pk": 5,
   "fields": {
-    "product_name": "РЈРЅРёС‚Р°Р·",
-    "product_description": "Р‘РµР»С‹Р№ Р±СЂР°С‚",
+    "product_name": "Унитаз",
+    "product_description": "Белый брат",
     "image": "",
     "category": 18,
     "price": 2000,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 2,
+    "is_published": false
   }
 },
 {
   "model": "catalog.product",
   "pk": 6,
   "fields": {
-    "product_name": "Р“СЂР°Р±Р»Рё",
-    "product_description": "Р“СЂР°Р±СЏС‚",
+    "product_name": "Грабли",
+    "product_description": "Грабят",
     "image": "",
     "category": 19,
     "price": 300,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 5,
+    "is_published": false
   }
 },
 {
   "model": "catalog.product",
   "pk": 7,
   "fields": {
-    "product_name": "РљСЂР°РіРё",
-    "product_description": "Р—Р°С‰РёС‰Р°СЋС‚ СЂСѓРєРё",
+    "product_name": "Краги",
+    "product_description": "Защищают руки",
     "image": "",
     "category": 20,
     "price": 500,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 2,
+    "is_published": false
   }
 },
 {
@@ -140,7 +154,9 @@
     "category": 19,
     "price": 1,
     "date_of_creation": "2023-07-17",
-    "last_modified_date": "2023-07-17"
+    "last_modified_date": "2023-07-17",
+    "user": 5,
+    "is_published": false
   }
 },
 {
@@ -149,7 +165,7 @@
   "fields": {
     "product": 2,
     "version_number": "001",
-    "version_name": "Р’РµСЂСЃРёСЏ 001",
+    "version_name": "Версия 001",
     "version_is_active": true
   }
 },
@@ -159,7 +175,7 @@
   "fields": {
     "product": 3,
     "version_number": "002",
-    "version_name": "Р’РµСЂСЃРёСЏ 002",
+    "version_name": "Версия 002",
     "version_is_active": true
   }
 },
