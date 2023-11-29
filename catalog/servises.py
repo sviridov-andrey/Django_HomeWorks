@@ -6,7 +6,11 @@ from config import settings
 
 def get_cached_categories():
     if settings.CACHE_ENABLED:
+<<<<<<< HEAD
         key = 'category_list'
+=======
+        key = f'category_list'
+>>>>>>> origin/master
         category_list = cache.get(key)
         if category_list is None:
             category_list = Category.objects.all()
